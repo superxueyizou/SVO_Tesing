@@ -38,7 +38,7 @@ public class Simulation
 	 */
 	public static void main(String[] args) throws Exception
 	{
-		String[] params = new String[]{"-file", "src/dominant/MaxNMAC.params"}; //MaxOscillation, MaxNMAC, MaxArea,RandMaxNMAC, RandMaxOscillation, RandMaxArea
+		String[] params = new String[]{"-file", "src/dominant/MaxNMAC.params"}; //MaxNMAC, RandMaxNMAC
 		ParameterDatabase database = Evolve.loadParameterDatabase(params);
 		EvolutionState eState= Evolve.initialize(database, 0);
 		eState.startFresh();
@@ -76,7 +76,7 @@ public class Simulation
 //		}
 				
 		eState.finish(result);		
-		Object[] options= new Object[]{"Recurrence","Weka","Close"};
+		Object[] options= new Object[]{"Recurrence","Close"};
 		int confirmationResult = JOptionPane.showOptionDialog(null, "choose the next step", "What's next", JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE, null, options, 0);
 		
 		if (confirmationResult == 0 )
@@ -106,13 +106,7 @@ public class Simulation
 			System.out.println("\nRecurrenceWithGUI");
 			SimulationWithUI.main(null);
 		}	
-		else if (confirmationResult == 1)
-		{
-			DataMiner dm = new DataMiner();
-			dm.execute(fileName);
-			
-		}
-		else if (confirmationResult == 2 )
+		else if (confirmationResult == 1 )
 		{
 			Evolve.cleanup(eState);	
 		}

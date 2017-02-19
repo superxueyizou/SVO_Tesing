@@ -22,7 +22,6 @@ public class MyStatistics extends SimpleShortStatistics
 
 	public MyStatistics() 
 	{
-		// TODO Auto-generated constructor stub
 		super();
 	}
 	

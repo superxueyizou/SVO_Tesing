@@ -13,7 +13,6 @@
 package dominant;
 
 import tools.CONFIGURATION;
-import tools.UTILS;
 import modeling.SAAModel;
 import modeling.SAAModelBuilder;
 import modeling.uas.UAS;
@@ -92,7 +91,6 @@ public class MaxNMAC extends Problem implements SimpleProblemForm
 		double tailApproachIsRightSide = ind2.genome[12];
 		double tailApproachPrefSpeed= ind2.genome[13];
 		
-		long time = System.nanoTime();
 		SAAModel simState= new SAAModel(785945568, CONFIGURATION.fieldXVal, CONFIGURATION.fieldYVal, false); 	
 		
 		int times =1, dividend=0;

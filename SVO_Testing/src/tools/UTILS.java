@@ -19,31 +19,7 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.util.List;
 
-import edu.unc.cs.gamma.orca.Vector2;
-
-import sim.util.Double2D;
-
-import weka.core.Instances;
-import weka.core.converters.ArffSaver;
-import weka.core.converters.CSVLoader;
-
-
 public class UTILS {
-
-	public UTILS() {
-		// TODO Auto-generated constructor stub
-	}
-	
-	
-	public static Double2D Vector2ToDouble2D(Vector2 v)
-	{
-		return new Double2D(v.x(),v.y());
-	}
-	
-	public static Vector2 Double2DToVector2(Double2D d)
-	{
-		return new Vector2(d.x,d.y);
-	}
 	
 	public static String readLastLine(File file, String charset) throws IOException 
 	{
@@ -201,28 +177,5 @@ public class UTILS {
             }
         }
     }
-    
-    
-    /**
-	   * takes 2 arguments:
-	   * - cvsFileName input file
-	   * - arffFileName output file
-	   */
-	  public static void CSV2Arff (String cvsFileName, String arffFileName) throws Exception 
-	  {
-	    // load CSV
-	    CSVLoader loader = new CSVLoader();
-	    loader.setSource(new File(cvsFileName));
-	    Instances data = loader.getDataSet();
-	 
-	    // save ARFF
-	    ArffSaver saver = new ArffSaver();
-	    saver.setInstances(data);
-	    saver.setFile(new File(arffFileName));
-	    saver.setDestination(new File(arffFileName));
-	    saver.writeBatch();
-	  }
-    
-
 
 }
