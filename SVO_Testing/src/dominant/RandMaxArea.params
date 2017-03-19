@@ -2,7 +2,7 @@
 # Licensed under the Academic Free License version 3.0
 # See the file "LICENSE" for more information
 
-parent.0		= /home/viki/EclipseWorkspace/ECJ/ecj/ec/simple/simple.params
+parent.0		= /home/xueyi/git/ECJ/ECJ/src/ec/simple/simple.params
 stat.file = $MaxAreaStatics.stat
 stat.num-children = 1
 stat.child.0 = dominant.MyStatistics
@@ -71,7 +71,6 @@ pop.subpop.0.species.min-gene = 0
 pop.subpop.0.species.max-gene = 1305
 
 pop.subpop.0.species.crossover-type	= two
-pop.subpop.0.species.crossover-likelihood	= 1.0
 
 pop.subpop.0.species.mutation-prob	= 1.0
 pop.subpop.0.species.mutation-type= reset
